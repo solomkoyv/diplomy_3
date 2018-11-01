@@ -1,3 +1,51 @@
 .col-3
 	@include grid-column(4, $neat)
 	@include grid-visual
+.main_content
+	width: 52em
+	margin-left: 3em
+	h1
+		font-family: $font_Tinos
+		font-size: 4.5em
+		font-weight: $regular
+		line-height: .6em
+		margin: .5em 0 .3em 0
+		span
+			font-size: .5em
+			font-family: $font_Tinos
+			font-style: italic
+.wrap_cards_doc
+	@include flex()
+.card_doc
+	@include flex($justify: center)
+	width: 29%
+	margin: 3% 2%
+	position: relative
+	&:after
+		@include pseudo-element($top: 0, $left: unset, $right: -10%)
+		width: 1px
+		height: 100%
+		border-right: 1px dotted $color_bg_dLite
+	&:nth-child(3n+3)
+		&:after
+			border-right: none
+	.wrap_card_btn
+		@include flex($justify: space-around)
+		width: 100%
+	.wrap_price
+		@include flex($justify: space-between)
+		width: 100%
+		.price
+			font-size: 0.75em
+			text-align: center
+			span
+				color: $color_text_active
+				font-size: 1.5em
+				font-weight: $extra-bold
+				sub
+					color: $color_text_active
+			
+
+
+
+			

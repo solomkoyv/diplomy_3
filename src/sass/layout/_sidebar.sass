@@ -1,0 +1,40 @@
+.side_bar
+  width: 16.875em
+  ul
+    background: $color_bg_lite
+    padding: 5% 1% 5% 10%
+    line-height: 1.2em
+    margin-top: -10%
+    li
+      position: relative
+      margin: 5% auto
+      &::before
+        @include pseudo-element($top: 30%, $left: -6%, $right:0)
+        width: 0.3em
+        height: 0.3em
+        background: $color_main
+        border-radius: 50%
+.side_bar_title
+  position: relative
+  background: $color_main
+  width: 100%
+  height: 4em
+  padding-left: 10%
+  line-height: 3em
+  font-size: 1.125em
+  color: $color_text_menu
+  clip-path: polygon(0 0,100% 0,100% 75%,17% 75%,11% 93%,11% 75%,0 75%)
+  .icon_type_doc
+    @include flex($justify: center, $wrap: nowrap)
+    background: #f11a44
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    width: 20%
+    clip-path: polygon(25% 0,100% 0,100% 100%,0 100%)
+    img
+      margin-left: 10%
+      margin-bottom: 30%
+
+

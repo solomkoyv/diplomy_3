@@ -1,0 +1,99 @@
+.wrap_header
+  @include flex($justify:center)
+  // background: url(/images/bg_top-min-100.jpg) no-repeat
+
+.heat
+  width: 100%
+  @include flex()
+  margin-bottom: 6em
+
+  .logo
+    @include flex()
+    width: 30%
+    div
+      font-family: $font_Karina
+      text-transform: uppercase
+      line-height: 0.7em
+      font-size: 1.5em
+      font-weight: 600
+      span
+        font-size: .5em
+      p
+        font-size: .7em
+        font-weight: 100
+
+.info
+  line-height: 0.5em
+  position: relative
+  p
+    margin: 0
+  &::before
+    @include pseudo-element($left:-20%)
+    width: 3em
+    height: 3em
+    background: url('/images/icons/accent.png') no-repeat center
+
+.call_back
+  @include flex($f_direction: column, $align: flex-end)
+  margin-right: 3%
+  p
+    margin: 0
+  .phone
+    font-size: 1.625em
+    font-weight: 700
+    position: relative
+    &::after
+      @include pseudo-element($top:15%,$left:auto,$right:-20%)
+      width: 1em
+      height: 1em
+      background: url('/images/icons/phone_icon.png') no-repeat center
+  .call_back_btn
+    font-family: $font_Karina
+    color: $color_warning
+    font-size: 1.35em
+    cursor: pointer
+    font-weight: 400
+    border-bottom: 1px dashed #6995aa
+.head_body
+  @include flex(flex, column, space-around, flex-start)
+  align-self: flex-start
+  height: 40.6875em
+  p
+    font-family: $font_Tinos
+    line-height: .8em
+    font-weight: bold
+    font-size: 4em
+    span
+      font-weight: normal
+.sticker
+  background: url('/images/stiker.png') no-repeat center
+  background-size: cover
+  width: 34.375em
+  height: 25.125em
+  padding: 3em 3em 3em 7em
+  line-height: 2.5em
+  li
+    position: relative
+    font-family: $font_main
+    &:last-child
+      line-height: 1.3em
+      margin-top: 2%
+    &::after
+      @include pseudo-element($top:30%,$left:-8%,$right:auto)
+      width: 1.3em
+      height: 1.1em
+      background: url('/images/icons/marker.png') no-repeat center
+.stick_title
+  width: 12em
+  position: relative
+  display: block
+  margin-bottom: 1em
+  text-align: center
+  font-size: 1.6875em
+  font-family: $font_Tinos
+  &::before
+    @include pseudo-element($top:-10%,$left:-5%,$right:auto)
+    width: 2em
+    height: 2em
+    background: url('/images/icons/mark.png') no-repeat center
+

@@ -1,0 +1,38 @@
+.burger_menu
+  display: none
+
+.wrap_menu
+  width: 100%
+  height: 2em
+  background-color: $color_bg_menu
+  @include flex($justify: space-around)
+  
+.menus
+  @include flex($justify: center, $wrap: nowrap)
+  width: 100%
+
+.main_menu 
+    width: 100%
+    ul 
+      width: 100%
+      @include flex()
+      a
+        width: 100%
+        height: 100%
+        text-decoration: none
+        text-transform: uppercase
+        color: $color_text_menu
+        font-family: $font_main
+        font-size: .9em
+        letter-spacing: 0.07px
+        transition: .3s
+        &:hover
+          color: $color_text_active
+
+.search
+  width: 1em
+  height: 1em
+  margin-left: 3%
+  @include flex($justify: center)
+  img
+    width: 100%

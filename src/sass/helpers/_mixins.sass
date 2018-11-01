@@ -1,0 +1,14 @@
+@mixin flex($display: flex, $f_direction: row, $justify: space-between, $align: center, $wrap: wrap)
+  display: $display
+  flex-direction: $f_direction
+  justify-content: $justify
+  align-items: $align
+  flex-wrap: $wrap
+
+@mixin pseudo-element($content: '', $display: block, $pos: absolute, $top: 0, $left: 0, $right:0)
+  content: $content
+  display: $display
+  position: $pos
+  top: $top
+  left: $left
+  right: $right
