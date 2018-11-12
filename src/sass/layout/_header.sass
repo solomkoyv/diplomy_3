@@ -1,11 +1,13 @@
 .wrap_header
   @include flex($justify:center)
   // background: url(/images/bg_top-min-100.jpg) no-repeat
+  margin-top: 4em
+  width: 100%
 
 .heat
   width: 100%
   @include flex()
-  margin-bottom: 6em
+  margin-bottom: 2em
 
   .logo
     @include flex()
@@ -57,7 +59,7 @@
 .head_body
   @include flex(flex, column, space-around, flex-start)
   align-self: flex-start
-  height: 40.6875em
+  // height: 40.6875em
   p
     font-family: $font_Tinos
     line-height: .8em
@@ -65,13 +67,27 @@
     font-size: 4em
     span
       font-weight: normal
+
+.wrapper_sticker
+  filter: drop-shadow(10px 10px 15px rgba(5, 12, 28, 0.15))
+  margin-top: 5%
+
 .sticker
-  background: url('/images/stiker.png') no-repeat center
-  background-size: cover
-  width: 34.375em
-  height: 25.125em
-  padding: 3em 3em 3em 7em
+  // background: url('/images/stiker.png') no-repeat center
+  // background-size: cover
+  clip-path: polygon(90% 0, 100% 15%, 100% 100%, 0 100%, 0 0)
+  background: $color_bg_lite
+  max-width: 30.375em
+  // height: 25.125em
+  padding: 3em 3em 3em 5em
   line-height: 2.5em
+  position: relative
+  &:after
+    @include pseudo-element($content: '', $display: block, $pos: absolute, $top: 0, $left: unset, $right:-.35em)
+    clip-path: polygon(0 0, 0 100%, 100% 100%)
+    background: $color_bg_dLite
+    width: 55px
+    height: 60px
   li
     position: relative
     font-family: $font_main

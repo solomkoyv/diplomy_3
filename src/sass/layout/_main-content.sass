@@ -2,8 +2,8 @@
 	@include grid-column(4, $neat)
 	@include grid-visual
 .main_content
-	width: 52em
-	margin-left: 3em
+	width: 71%
+  margin-left: 3%
 	h1
 		font-family: $font_Tinos
 		font-size: 4.5em
@@ -17,8 +17,8 @@
 .wrap_cards_doc
 	@include flex()
 .card_doc
-	@include flex($justify: center)
-	width: 29%
+	@include flex($f_direction: column, $justify: center)
+	min-width: 29%
 	margin: 3% 2%
 	position: relative
 	&:after
@@ -44,8 +44,101 @@
 				font-weight: $extra-bold
 				sub
 					color: $color_text_active
-			
+.logic_buy
+	@include flex($f_direction: column, $justify: center, $align: flex-start)
+	position: relative
+	z-index: 2
+	h2
+		font-family: $font_Tinos
+		font-size: 2.75em
+		font-weight: $regular
+		line-height: 1em
+		margin-bottom: .5em
+		align-self: flex-start
+	span
+		align-self: flex-start
+		margin-bottom: 5%
+		align-self: flex-start
+	p
+		width: 64%
+		align-self: flex-start
+		span
+			font-weight: $semi-bold
+	&:after
+		@include pseudo-element($top: 10%, $left: 40%, $right: unset)
+		width: 100%
+		height: 59em
+		background: url('/images/bg_center.png') no-repeat center
+		background-size: contain
+		z-index: -2
+.buy_steps
+	align-self: flex-start
+	@include flex($f_direction: column, $justify: center)
+	padding-left: 5%
+	& + p
+		width: 100%
+	p
+		width: 50%
+		margin: 10% 0
+	.step1
+		position: relative
+		&:before
+			@include pseudo-element($content: '1', $display: block, $pos: absolute, $top: -140%, $left: -40%, $right:unset)
+			font-size: 7.5em
+			font-family: $font_Tinos
+			color: $color_mark
+	.step2
+		position: relative
+		align-self: center
+		&:before
+			@include pseudo-element($content: '2', $display: block, $pos: absolute, $top: -140%, $left: -45%, $right:unset)
+			font-size: 7.5em
+			font-family: $font_Tinos
+			color: $color_mark
+	.step3
+		position: relative
+		align-self: flex-end
+		&:before
+			@include pseudo-element($content: '3', $display: block, $pos: absolute, $top: -70%, $left: -45%, $right:unset)
+			font-size: 7.5em
+			font-family: $font_Tinos
+			color: $color_mark
+.logic_buy_email_block
+	width: 100%
+	img
+		margin: 0 3%
+	.logic_buy_email
+		color: $color_main
+		border-bottom: 1px dotted $color_text_title
+		padding-bottom: 1%
+.state_sign
+	@include flex($f_direction: column, $justify: center, $align: flex-start)
+	position: relative
+	z-index: 2
+	h2
+		font-family: $font_Tinos
+		font-size: 2.75em
+		font-weight: $regular
+		line-height: .7em
+		margin-bottom: .5em
+		align-self: flex-start
+	span
+		align-self: flex-start
+		margin-bottom: 5%
+		align-self: flex-start
+		font-size: .55em
+		font-family: $font_Tinos
+		font-style: italic
+	p
+		width: 64%
+		align-self: flex-start
+		span
+			font-weight: $semi-bold
+	&:before
+		@include pseudo-element($top: -120%, $left: -50%, $right: unset)
+		width: 55%
+		height: 30em
+		background: url('/images/icons/bg_gerb.png') no-repeat center
+		background-size: contain
+		z-index: -2
 
-
-
-			
