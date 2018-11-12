@@ -115,13 +115,28 @@
 	@include flex($f_direction: column, $justify: center, $align: flex-start)
 	position: relative
 	z-index: 2
+	text-align: center
+	// img
+		// display: inline-block
+		// float: left
+		// width: 20%
+		// margin-right: 5%
 	h2
+		display: inline-block
 		font-family: $font_Tinos
-		font-size: 2.75em
+		font-size: 3.75em
 		font-weight: $regular
 		line-height: .7em
 		margin-bottom: .5em
 		align-self: flex-start
+		position: relative
+		&:before
+			@include pseudo-element($top: -20%, $left: -25%, $right: unset)
+			width: 20%
+			height: 2em
+			background: url('/images/icons/gerb.png') no-repeat center
+			background-size: contain
+			z-index: -2
 	span
 		align-self: flex-start
 		margin-bottom: 5%
@@ -130,15 +145,23 @@
 		font-family: $font_Tinos
 		font-style: italic
 	p
-		width: 64%
-		align-self: flex-start
+		// width: 64%
+		// align-self: flex-start
+		text-indent: -10%
 		span
 			font-weight: $semi-bold
 	&:before
-		@include pseudo-element($top: -120%, $left: -50%, $right: unset)
+		@include pseudo-element($top: -45%, $left: -50%, $right: unset)
 		width: 55%
 		height: 30em
 		background: url('/images/icons/bg_gerb.png') no-repeat center
 		background-size: contain
 		z-index: -2
+	.btn
+		margin-right: 35%
 
+.line_sep
+	width: 60%
+	height: 1px
+	background: $color_bg_dLite
+	margin: 1% 0 6% 0 

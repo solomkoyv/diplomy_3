@@ -66,6 +66,6 @@ v1.2.2
 4. В верстку стоит подключать **минифицированные файлы** — main.min.css/common.min.js/libs.min.js, т.к. именно **они попадают затем в билд!**
 
 ## Обратная связь
-Почта: [mishkacod@gmail.com](mailto:mishkacod@gmail.com)
+Почта: 
 
 Или написать **[Issue](https://github.com/vorobiovkirill/optimized-template-gulp-sass-bourbon-neat-v.2/issues/new)**
