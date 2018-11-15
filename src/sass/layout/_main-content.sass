@@ -83,7 +83,7 @@
 	.step1
 		position: relative
 		&:before
-			@include pseudo-element($content: '1', $display: block, $pos: absolute, $top: -140%, $left: -40%, $right:unset)
+			@include pseudo-element($content: '1', $display: block, $pos: absolute, $top: -140%, $left: -45%, $right:unset)
 			font-size: 7.5em
 			font-family: $font_Tinos
 			color: $color_mark
@@ -148,15 +148,16 @@
 		// width: 64%
 		// align-self: flex-start
 		text-indent: -10%
+		margin-bottom: 5%
 		span
 			font-weight: $semi-bold
 	&:before
-		@include pseudo-element($top: -45%, $left: -50%, $right: unset)
-		width: 55%
+		@include pseudo-element($top: -50%, $left: -40%, $right: unset)
+		width: 45%
 		height: 30em
 		background: url('/images/icons/bg_gerb.png') no-repeat center
 		background-size: contain
-		z-index: -2
+		z-index: -3
 	.btn
 		margin-right: 35%
 
@@ -165,3 +166,197 @@
 	height: 1px
 	background: $color_bg_dLite
 	margin: 1% 0 6% 0 
+.wrap_recall
+	background: $color_bg_recall
+	width: 100%
+	z-index: 2
+	padding: 2% 0
+	margin-top: 2%
+
+.recall
+	@include flex($f_direction: column, $justify: center, $align: center)
+	position: relative
+	&:before
+		@include pseudo-element($top: -34%, $left: -25%, $right: unset)
+		width: 56%
+		height: 30em
+		background: url('/images/bg_slider.png') no-repeat center
+		background-size: contain
+		z-index: -1
+	&:after
+		@include pseudo-element($top: -30%, $left: 80%, $right: unset)
+		width: 8em
+		height: 8em
+		background: url('/images/petal.png') no-repeat center
+		background-size: contain
+		z-index: -1
+	.title_slider_recall
+		align-self: flex-end
+		width: 75%
+	
+	.slider_recall
+		width: 75%
+		align-self: flex-end
+		@include flex($display: flex, $f_direction: row, $justify: space-between, $align: center, $wrap: wrap)
+		.card_recall
+			width: 50%
+	h2
+		display: inline-block
+		font-family: $font_Tinos
+		font-size: 3.75em
+		font-weight: $regular
+		line-height: .7em
+		margin-bottom: .5em
+	span
+		align-self: flex-start
+		margin-bottom: 5%
+		align-self: flex-start
+		font-size: .55em
+		font-family: $font_Tinos
+		font-style: italic
+	.card_recall
+		div
+			@include flex($display: flex, $f_direction: row, $justify: flex-start, $align: center, $wrap: wrap)
+			div
+				@include flex($display: flex, $f_direction: column, $justify: flex-start, $align: flex-start, $wrap: wrap)
+				margin-left: 5%
+				p
+					line-height: 1.5em
+					margin: 0
+		p
+			margin-top: 5%
+.faq
+	padding: 5% 0
+	.line_sep
+		width: 100%
+	h2
+		display: inline-block
+		font-family: $font_Tinos
+		font-size: 3.75em
+		font-weight: $regular
+		line-height: .7em
+		margin-bottom: .5em
+		position: relative
+		text-indent: 7%
+		&:before
+			@include pseudo-element($top: -10%, $left: 0%, $right: unset)
+			width: 1em
+			height: 1em
+			background: url('/images/icons/question_icon.png') no-repeat center
+			background-size: contain
+			z-index: -1
+	.btn_lite
+		margin-left: 40%
+    	transform: translateY(-25%)
+	.wrap_dialog
+		@include flex($align:flex-start)
+		.card_dialog
+			@include flex($display: flex, $f_direction: column, $justify: flex-start, $align: flex-start, $wrap: wrap)
+			width: 45%
+			.question
+				position: relative
+				margin-left: 7%
+				&:before
+					@include pseudo-element($top: 10%, $left: -35px, $right: unset)
+					position: absolute
+					width: 1.5em
+					height: 1.5em
+					background: url('/images/icons/question_icon_lite.png') no-repeat center
+					background-size: contain
+					z-index: -1
+			.answer
+				span
+					font-size: 0.9em
+					color: $color_mark
+.discont
+	background: url('/images/bg_discont.png') no-repeat center
+	width: 100%
+	padding: 3% 0
+	h2
+		display: inline-block
+		font-family: $font_Tinos
+		font-size: 3.75em
+		font-weight: $regular
+		line-height: .7em
+		margin-bottom: .5em
+	span
+		align-self: flex-start
+		margin-bottom: 5%
+		align-self: flex-start
+		font-size: .55em
+		font-family: $font_Tinos
+		font-style: italic
+	.btn
+		left: 50%
+		transform: translateX(-50%)
+
+.steps_order
+	h2
+		display: inline-block
+		font-family: $font_Tinos
+		font-size: 2.75em
+		font-weight: $regular
+		line-height: .7em
+		margin-bottom: .5em
+	span
+		align-self: flex-start
+		margin-bottom: 5%
+		align-self: flex-start
+		font-size: .55em
+		font-family: $font_Tinos
+		font-style: italic
+.wrap_card_steps
+	@include flex($align:flex-start)
+	.card_step
+		width: 30%
+		margin: 1.6%
+		.num_step
+			font-family: $font_Tinos
+			font-size: 4.5em
+			color: $color_mark
+			margin-right: 5%
+		.title_step
+			display: inline-block
+			font-size: 1.2rem
+			width: 14em
+			// vertical-align: middle
+			margin: 0
+			font-weight: $semi-bold
+		p
+			font-size: .85em
+	.step1
+		position: relative
+		&:after
+			@include pseudo-element($top: -13%, $left: 65%, $right: unset)
+			width: 10em
+			height: 6em
+			background: url('/images/icons/step_arow_1.png') no-repeat center
+			background-size: contain
+			z-index: -1
+	.step2
+		position: relative
+		&:after
+			@include pseudo-element($top: -30%, $left: 50%, $right: unset)
+			width: 13em
+			height: 6em
+			background: url('/images/icons/step_arow_2.png') no-repeat center
+			background-size: contain
+			z-index: -1
+	.step3
+		position: relative
+		&:after
+			@include pseudo-element($top: 90%, $left: -35%, $right: unset)
+			width: 10em
+			height: 5em
+			background: url('/images/icons/step_arow_4.png') no-repeat center
+			background-size: contain
+			z-index: -1
+	.step6
+		position: relative
+		&:after
+			@include pseudo-element($top: -45%, $left: 10%, $right: unset)
+			width: 30em
+			height: 10em
+			background: url('/images/icons/step_arow_3.png') no-repeat center
+			background-size: contain
+			z-index: -1
