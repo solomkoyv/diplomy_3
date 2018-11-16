@@ -50,10 +50,10 @@ footer
   border-top: 1px solid $color_text_title
   margin-bottom: 1%
   .payment
-    width: 80%
+    // width: 80%
     div
       @include flex()
-      padding-right: 10%
+      // padding-right: 10%
     .qiwi
       background: url('/images/icons/pay.png') no-repeat center
       background-position-x: 0
@@ -86,10 +86,29 @@ footer
       height: 3em
     
   .social
-    // width: 20%
     text-align: center
-    img
-      margin: 0 2%
+    .social_group
+      a
+        display: inline-block
+        width: 3em
+        height: 3em
+        margin: 0 5px
+      .vk
+        background: url('../images/icons/social-network-logo-collection.png') -10px -135px no-repeat
+        background-size: 200px
+      .face
+        background: url('../images/icons/social-network-logo-collection.png') -10px -10px no-repeat
+        background-size: 200px
+      .twitt
+        background: url('../images/icons/social-network-logo-collection.png') -77px -9px no-repeat
+        background-size: 200px
+      .inst
+        background: url('../images/icons/social-network-logo-collection.png') -143px -8px no-repeat
+        background-size: 200px
+      .google
+        background: url('../images/icons/social-network-logo-collection.png') -10px -70px no-repeat
+        background-size: 200px
+
 .wrap_copyright
   @include flex($f_direction: column)
   background: $color_bg_menu

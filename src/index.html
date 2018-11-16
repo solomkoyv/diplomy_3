@@ -7,6 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>dilomy3</title>
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
 	<link rel="stylesheet" href="/css/style.min.css">
 </head>
 
@@ -277,6 +279,14 @@
 						</div>
 					</div>
 				</div>
+				<section class="video_doc">
+					<div>
+						<h2>Видео документа</h2>
+					<p>пример оригинального <br>
+						документа об образовании</p>
+					</div>
+					<img src="/images/icons/video.jpg" alt="video">
+				</section>
 				<section class="logic_buy">
 					<div class="conteiner">
 						<h2>Купить диплом о высшем образовании: насколько осуществимо?</h2>
@@ -333,6 +343,26 @@
 						</div>
 					</div>
 					<p>Каждая деталь корочки сделано предельно аккуратно. Для меня это было чрезвычайно важно! Так что бояться нечего. Если что, еще к вам обращусь.</p>
+				</div>
+				<div class="card_recall">
+						<div>
+							<img src="/images/icons/icon_recall.png" alt="">
+							<div>
+								<p class="name">Витктория</p>
+								<p class="sity">Москва</p>
+							</div>
+						</div>
+						<p>Каждая деталь корочки сделано предельно аккуратно. Для меня это было чрезвычайно важно! Так что бояться нечего. Если что, еще к вам обращусь.</p>
+				</div>
+				<div class="card_recall">
+						<div>
+							<img src="/images/icons/icon_recall.png" alt="">
+							<div>
+								<p class="name">Витктория</p>
+								<p class="sity">Москва</p>
+							</div>
+						</div>
+						<p>Каждая деталь корочки сделано предельно аккуратно. Для меня это было чрезвычайно важно! Так что бояться нечего. Если что, еще к вам обращусь.</p>
 				</div>
 				<div class="card_recall">
 						<div>
@@ -479,7 +509,14 @@
 				</div>
 				<div class="social">
 					<p>Мы в социальных сетях</p>
-					<img src="/images/icons/social.png" alt="">
+					<!-- <img src="/images/icons/social.png" alt=""> -->
+					<div class="social_group">
+						<a href="https://vk.com/club161555712" class="vk" target="_blank" rel="nofollow"></a>
+						<a href="https://www.facebook.com/rudikdip/" class="face" target="_blank" rel="nofollow"></a>
+						<a href="https://twitter.com/rudik9266474166" class="twitt" target="_blank" rel="nofollow"></a>
+						<a href="https://www.instagram.com/rudiplomss/" class="inst" target="_blank" rel="nofollow"></a>
+						<a href="https://plus.google.com/111026941637541866243" class="google" target="_blank" rel="nofollow"></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -492,6 +529,39 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.slider_recall').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				arrows: false,
+				dots: true,
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3,
+							infinite: true,
+							dots: true
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+		});
+	</script>
 </body>
 
 </html>

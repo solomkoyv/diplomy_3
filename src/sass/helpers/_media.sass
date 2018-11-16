@@ -13,24 +13,31 @@
 /// Small Devices, Tablets
 @media only screen and (max-width : 768px)
 	.conteiner
-		overflow: hidden
+		// overflow: hidden
 	body
 		padding-top: 3em
-		background-position-y: .8%
+		background-position-y: .5%
 	.burger_menu
 		display: block
 	.main_menu
 		display: none
+	.wrap_header
+		margin-top: 2%
 	.head_body
 		.btn
 			font-size: 1em
 		p
-			font-size: 3em
+			font-size: 2em
+	.wrapper_sticker
+		width: 100%
 		.sticker
-			padding: 3em 0em 3em 2em
+			padding: 3em 1em 3em 2em
 			clip-path: polygon(85% 0, 100% 15%, 100% 100%, 0 100%, 0 0)
+			width: 95%
 			ul
 				line-height: 1.5em
+			.stick_title
+				font-size: 1.4em
 	.main_content
 		width: 100%
 		h1
@@ -39,9 +46,32 @@
 		display: none
 	.wrap_cards_doc
 		justify-content: center
+		&:after
+			display: none
 		.card_doc
 			&:after
 				display: none
+	.video_doc
+		div
+			width: 90%
+			h2
+				font-size: 2em
+			h2, p
+				text-align: right
+			&:before
+				left: -5%
+		img
+			width: 100%
+	.logic_buy:after
+		display: none
+	.logic_buy
+		.conteiner
+			width: 100%
+		h2
+			font-size: 1.9em
+		p
+			width: 100%
+
 	.wrap_services
 		flex-direction: column
 		justify-content: center
@@ -65,17 +95,71 @@
 				justify-content: space-around
 	.buy_steps .step1, .buy_steps .step2, .buy_steps .step3
 		align-self: center
+	.buy_steps .step3:before
+		top: -140%
 	.buy_steps p
 		width: 55%
 	.state_sign 
 		.btn
 			font-size: 1em
+			margin: 0
 		h2
 			font-size: 1.5em
 			&:before
 				left: -22%
 		p
 			font-size: .8em
+	.logic_buy_email_block
+		img
+			width: 5%
+	.recall
+		&:after
+			width: 3em
+			top: 5%
+		&:before
+			display: none
+		h2
+			font-size: 2em
+		.title_slider_recall, .slider_recall
+			width: 90%
+			align-self: center
+			margin-bottom: 5%
+	.faq
+		h2
+			display: block
+			margin-bottom: 5%
+			margin: 0 auto
+			width: 70%
+			font-size: 2em
+			&:before
+				left: -5%
+		.line_sep
+			margin-top: 5%
+		.wrap_dialog
+			width: 90%
+			justify-content: center
+			margin: 0 auto
+			.card_dialog
+				width: 95%
+	.steps_order
+		width: 90%
+		h2
+			font-size: 2em
+		.card_step
+			width: 100%
+			.num_step
+				margin-right: 0%
+		.step1, .step2, .step3, .step6
+			&:after
+				display: none
+	.discont
+		.container
+			width: 90%
+		h2
+			font-size: 2em
+		.btn
+			font-size: 1em
+
 	///
 
 

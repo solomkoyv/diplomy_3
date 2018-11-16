@@ -16,6 +16,14 @@
 			font-style: italic
 .wrap_cards_doc
 	@include flex()
+	position: relative
+	&:after
+		@include pseudo-element($top: 45%, $left: 115%, $right: unset)
+		width: 6em
+		height: 6em
+		background: url('/images/petal.png') no-repeat center
+		background-size: contain
+		z-index: -1
 .card_doc
 	@include flex($f_direction: column, $justify: center)
 	min-width: 29%
@@ -44,6 +52,31 @@
 				font-weight: $extra-bold
 				sub
 					color: $color_text_active
+.video_doc
+	@include flex()
+	margin: 5% 0
+	div
+		margin-left: 7%
+		position: relative
+		&:before
+			@include pseudo-element($top: 20%, $left: -20%, $right: 0%)
+			width: 3em
+			height: 3em
+			background: url('/images/icons/play_icon.png') no-repeat center
+			background-size: contain
+		h2
+			font-family: $font_Tinos
+			font-size: 2.75em
+			font-weight: $regular
+			line-height: 1em
+			margin-bottom: .5em
+			align-self: flex-start
+		p
+			font-family: $font_Tinos
+			color: $color_text_lite
+			font-style: italic
+			font-size: 1.4em
+			line-height: 1.2em
 .logic_buy
 	@include flex($f_direction: column, $justify: center, $align: flex-start)
 	position: relative
@@ -172,13 +205,13 @@
 	z-index: 2
 	padding: 2% 0
 	margin-top: 2%
-
+	
 .recall
 	@include flex($f_direction: column, $justify: center, $align: center)
 	position: relative
 	&:before
-		@include pseudo-element($top: -34%, $left: -25%, $right: unset)
-		width: 56%
+		@include pseudo-element($top: -27%, $left: -27%, $right: unset)
+		width: 61%
 		height: 30em
 		background: url('/images/bg_slider.png') no-repeat center
 		background-size: contain
@@ -225,6 +258,13 @@
 					margin: 0
 		p
 			margin-top: 5%
+
+.slick-dots
+	li 
+		button
+			&:before
+				font-size: 8px
+
 .faq
 	padding: 5% 0
 	.line_sep
