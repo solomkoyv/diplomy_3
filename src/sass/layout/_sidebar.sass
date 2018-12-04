@@ -1,5 +1,7 @@
 .side_bar
   width: 25%
+  .current > a
+    color: $color_main
   ul
     background: $color_bg_lite
     padding: 5% 1% 5% 10%
@@ -8,12 +10,19 @@
     li
       position: relative
       margin: 5% auto
+      transition: .2s
+      &:hover > a
+        color: $color_main
       &::before
         @include pseudo-element($top: 30%, $left: -6%, $right:0)
         width: 0.3em
         height: 0.3em
         background: $color_main
         border-radius: 50%
+      a
+        text-decoration: none
+        transition: .2s
+
 
 .block_side_bar
   margin: 10% 0

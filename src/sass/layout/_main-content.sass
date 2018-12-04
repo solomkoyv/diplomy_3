@@ -3,20 +3,60 @@
 	@include grid-visual
 .main_content
 	width: 71%
-  margin-left: 3%
+	margin-left: 3%
+	@include flex($display: flex, $f_direction: column, $justify: space-between, $align: flex-start, $wrap: wrap)
 	h1
 		font-family: $font_Tinos
 		font-size: 4.5em
 		font-weight: $regular
-		line-height: .6em
+		line-height: .95em
 		margin: .5em 0 .3em 0
 		span
 			font-size: .5em
 			font-family: $font_Tinos
 			font-style: italic
+	ul
+		width: 80%
+		margin-left: 15%
+		// align-self: flex-end
+		li
+			margin: 2% 0
+			position: relative
+			&:before
+				@include pseudo-element($top: 20%, $left: -5%, $right: 0%)
+				width: 1em
+				height: 1em
+				background: url('/src/images/icons/list_icon.png') no-repeat center
+				background-size: contain
+	h2
+		text-indent: 2.5em
+		position: relative
+	.advt_icon
+		&:before
+			@include pseudo-element($top: -25%, $left: 0%, $right: 0%)
+			width: 1.8em
+			height: 1.8em
+			background: url('/src/images/icons/advt_icon.png') no-repeat center
+			background-size: contain
+	.pay_card
+		&:before
+			@include pseudo-element($top: -5%, $left: 0%, $right: 0%)
+			width: 2em
+			height: 2em
+			background: url('/src/images/icons/pay_card_icon.png') no-repeat center
+			background-size: contain
+	.delivery_icon
+		&:before
+			@include pseudo-element($top: -5%, $left: 0%, $right: 0%)
+			width: 2em
+			height: 2em
+			background: url('/src/images/icons/delivery_icon.png') no-repeat center
+			background-size: contain
+
 .wrap_cards_doc
 	@include flex()
 	position: relative
+	width: 100%
 	&:after
 		@include pseudo-element($top: 45%, $left: 115%, $right: unset)
 		width: 6em
@@ -29,6 +69,8 @@
 	min-width: 29%
 	margin: 3% 2%
 	position: relative
+	p
+		height: 3em
 	&:after
 		@include pseudo-element($top: 0, $left: unset, $right: -10%)
 		width: 1px
@@ -52,9 +94,33 @@
 				font-weight: $extra-bold
 				sub
 					color: $color_text_active
+.card_doc_price
+	@include flex($justify: space-between)
+	width: 100%
+	margin: 2% 0
+	border-bottom: 1px solid $color_bg_dLite
+	&:last-child
+		border-bottom: none
+	div
+		width: 33%
+	.wrap_price
+		@include flex($justify: space-between)
+		width: 100%
+		.price
+			font-size: 0.75em
+			text-align: center
+			span
+				color: $color_text_active
+				font-size: 1.5em
+				font-weight: $extra-bold
+				sub
+					color: $color_text_active
+	
+
 .video_doc
 	@include flex()
 	margin: 5% 0
+	width: 100%
 	div
 		margin-left: 7%
 		position: relative
@@ -71,12 +137,15 @@
 			line-height: 1em
 			margin-bottom: .5em
 			align-self: flex-start
+			text-indent: 0
 		p
 			font-family: $font_Tinos
 			color: $color_text_lite
 			font-style: italic
 			font-size: 1.4em
 			line-height: 1.2em
+	img
+		cursor: pointer
 .logic_buy
 	@include flex($f_direction: column, $justify: center, $align: flex-start)
 	position: relative
@@ -149,11 +218,8 @@
 	position: relative
 	z-index: 2
 	text-align: center
-	// img
-		// display: inline-block
-		// float: left
-		// width: 20%
-		// margin-right: 5%
+	align-self: center
+	margin-bottom: 2%
 	h2
 		display: inline-block
 		font-family: $font_Tinos
@@ -164,7 +230,7 @@
 		align-self: flex-start
 		position: relative
 		&:before
-			@include pseudo-element($top: -20%, $left: -25%, $right: unset)
+			@include pseudo-element($top: -20%, $left: -10%, $right: unset)
 			width: 20%
 			height: 2em
 			background: url('/images/icons/gerb.png') no-repeat center
@@ -185,7 +251,7 @@
 		span
 			font-weight: $semi-bold
 	&:before
-		@include pseudo-element($top: -50%, $left: -40%, $right: unset)
+		@include pseudo-element($top: -35%, $left: -25%, $right: unset)
 		width: 45%
 		height: 30em
 		background: url('/images/icons/bg_gerb.png') no-repeat center
@@ -210,8 +276,8 @@
 	@include flex($f_direction: column, $justify: center, $align: center)
 	position: relative
 	&:before
-		@include pseudo-element($top: -27%, $left: -27%, $right: unset)
-		width: 61%
+		@include pseudo-element($top: -28%, $left: -27%, $right: unset)
+		width: 60%
 		height: 30em
 		background: url('/images/bg_slider.png') no-repeat center
 		background-size: contain
@@ -247,17 +313,22 @@
 		font-size: .55em
 		font-family: $font_Tinos
 		font-style: italic
-	.card_recall
+.card_recall
+	div
+		@include flex($display: flex, $f_direction: row, $justify: flex-start, $align: center, $wrap: wrap)
 		div
-			@include flex($display: flex, $f_direction: row, $justify: flex-start, $align: center, $wrap: wrap)
-			div
-				@include flex($display: flex, $f_direction: column, $justify: flex-start, $align: flex-start, $wrap: wrap)
-				margin-left: 5%
-				p
-					line-height: 1.5em
-					margin: 0
-		p
-			margin-top: 5%
+			@include flex($display: flex, $f_direction: column, $justify: flex-start, $align: flex-start, $wrap: wrap)
+			margin-left: 5%
+			p
+				line-height: 1.5em
+				font-size: .75em
+				margin: 0
+			.name
+				font-family: $font_Tinos
+				font-size: 1.25em
+	.answer
+		background: #d7f4ff
+		padding: 1% 4%
 
 .slick-dots
 	li 
@@ -308,6 +379,11 @@
 				span
 					font-size: 0.9em
 					color: $color_mark
+.body_page
+	.faq 
+		.wrap_dialog 
+			.card_dialog
+				width: 100%
 .discont
 	background: url('/images/bg_discont.png') no-repeat center
 	width: 100%
@@ -400,3 +476,65 @@
 			background: url('/images/icons/step_arow_3.png') no-repeat center
 			background-size: contain
 			z-index: -1
+
+.map
+	width: 100%
+	iframe
+		width: 100%
+		height: 300px
+.contacts
+	@include flex()
+	width: 100%
+	.btn
+		font-size: 1em
+		width: 12em
+		text-transform: uppercase
+		text-indent: 1%
+		box-shadow: none
+		font-family: $font_Karina
+		font-weight: bold
+		&:after
+			display: none
+	.phone
+		font-size: 2em
+		font-weight: bold
+		position: relative
+		width: max-content
+		display: block
+	p
+		margin: 0
+	.phone_icon
+		text-indent: 12%
+		&:before
+			@include pseudo-element($top: 30%, $left: 0%, $right: unset)
+			width: .7em
+			height: .7em
+			background: url('/src/images/icons/phone_icon.png') no-repeat center
+			background-size: contain
+			z-index: -1
+.B_crumbBox
+	margin-bottom: 2%
+
+#pagination
+	align-self: center
+	letter-spacing: .5em
+	font-size: 1.5em
+	width: 100%
+	text-align: center
+	.ditto_currentpage
+		display: inline-block
+		background: red
+		width: 1em
+		color: #fff
+		text-align: center
+		padding-left: .5%
+		margin: 0 2%
+	a
+		text-decoration: none
+	.ditto_next_link, .ditto_previous_link
+		text-decoration: none
+		letter-spacing: normal
+		font-size: .7em
+		span
+			font-weight: bold
+			color: $color_main
